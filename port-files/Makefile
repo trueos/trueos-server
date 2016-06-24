@@ -26,9 +26,10 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
 		ataidle>=0:sysutils/ataidle \
 		openntpd>=0:net/openntpd
 
-CONFLICTS=      pcbsd-utils*
+CONFLICTS=      pcbsd-utils* trueos-desktop
 
 WRKSRC_SUBDIR=	xtrafiles
+MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
 
 USE_GITHUB=     yes
 GH_ACCOUNT=     trueos
