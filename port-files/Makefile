@@ -28,10 +28,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
 
 CONFLICTS=      pcbsd-utils*
 
-NO_BUILD=	yes
-
-do-install:
-	${DO_NADA}
+WRKSRC_SUBDIR=	xtrafiles
 
 USE_GITHUB=     yes
 GH_ACCOUNT=     trueos
