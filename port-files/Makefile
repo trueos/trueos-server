@@ -10,8 +10,7 @@ DISTFILES=
 MAINTAINER=	jmaloney@ixsystems.com
 COMMENT=	TrueOS Server
 
-RUN_DEPENDS=	${LOCALBASE}/bin/warden-to-iocage:misc/trueos-core \
-		${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
+RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
 		${LOCALBASE}/sbin/pc-sysinstall:sysutils/pc-sysinstall \
 		${LOCALBASE}/bin/pc-su:sysutils/pcbsd-utils \
 		${LOCALBASE}/share/pcbsd/scripts/functions.sh:sysutils/trueos-libsh \
@@ -37,7 +36,7 @@ do-install:
 
 USE_GITHUB=     yes
 GH_ACCOUNT=     trueos
-GH_PROJECT=     trueos-server
+GH_PROJECT=     trueos-core
 GH_TAGNAME=     %%GHTAG%%
 
 .include <bsd.port.mk>
