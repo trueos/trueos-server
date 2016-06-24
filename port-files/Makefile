@@ -27,6 +27,8 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
 		ataidle>=0:sysutils/ataidle \
 		openntpd>=0:net/openntpd
 
+CONFLICTS=      pcbsd-utils*
+
 NO_BUILD=	yes
 
 do-install:
