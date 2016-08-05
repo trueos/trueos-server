@@ -14,6 +14,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
 		${LOCALBASE}/sbin/pc-sysinstall:sysutils/pc-sysinstall \
 		${LOCALBASE}/share/trueos/scripts/functions.sh:sysutils/trueos-libsh \
 		${LOCALBASE}/bin/lpreserver:sysutils/life-preserver \
+		${LOCALBASE}/bin/sysadm-binary:sysutils/sysadm \
 		${LOCALBASE}/sbin/beadm:sysutils/beadm \
 		${LOCALBASE}/bin/sudo:security/sudo \
 		${LOCALBASE}/bin/bash:shells/bash \
