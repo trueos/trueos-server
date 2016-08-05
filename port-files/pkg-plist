@@ -6,6 +6,7 @@ etc/fonts/local.conf
 etc/pkg/fingerprints/trueos/trusted/pkg.cdn.trueos.org.20160701
 etc/pkg/repos/trueos.conf.dist
 etc/sudoers.d/trueos
+share/icons/default/index.theme
 share/trueos/conf/brand-trueos.4th
 share/trueos/conf/loader.conf.trueos
 share/trueos/conf/logo-trueos.4th
