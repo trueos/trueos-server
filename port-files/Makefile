@@ -17,7 +17,6 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
 		${LOCALBASE}/bin/sysadm-binary:sysutils/sysadm \
 		${LOCALBASE}/sbin/beadm:sysutils/beadm \
 		${LOCALBASE}/bin/sudo:security/sudo \
-		${LOCALBASE}/bin/bash:shells/bash \
 		${LOCALBASE}/bin/zsh:shells/zsh \
 		${LOCALBASE}/bin/rsync:net/rsync \
 		${LOCALBASE}/bin/screen:sysutils/screen \
