@@ -24,7 +24,8 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
 		${LOCALBASE}/bin/nano:editors/nano \
 		${LOCALBASE}/bin/zfs-stats:sysutils/zfs-stats \
 		ataidle>=0:sysutils/ataidle \
-		openntpd>=0:net/openntpd
+		openntpd>=0:net/openntpd \
+		bhyve-firmware>=0:sysutils/bhyve-firmware
 
 CONFLICTS=	pcbsd-utils-[0-9]* trueos-desktop-[0-9]*
 WRKSRC_SUBDIR=	xtrafiles
