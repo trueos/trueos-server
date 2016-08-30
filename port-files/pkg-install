@@ -14,7 +14,7 @@ if [ $? -eq 0 ] ; then
 fi
 
 # Copy over the rc.conf.trueos file
-install -m 644 ${PREFIX}/share/trueos/conf/rc.conf.trueos /etc/rc.conf.trueos
+install -m 644 ${PREFIX}/share/trueos/conf/rc.conf.server /etc/rc.conf.trueos
 if [ -e "/etc/default/trueos" -o -e "/etc/defaults/trueos-desktop" ] ; then
   install -m 644 ${PREFIX}/share/trueos/conf/loader.conf.trueos /boot/loader.conf.trueos
   install -m 644 ${PREFIX}/share/trueos/conf/brand-trueos.4th /boot/brand-trueos.4th
