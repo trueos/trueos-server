@@ -10,7 +10,8 @@ share/X11/xorg.conf.d/20-intel.conf
 share/icons/default/index.theme
 share/pixmaps/start-here-lumina.png
 share/trueos/conf/brand-trueos.4th
-share/trueos/conf/loader.conf.trueos
+share/trueos/conf/loader.conf.desktop
+share/trueos/conf/loader.conf.server
 share/trueos/conf/logo-trueos.4th
 share/trueos/conf/ntpd.conf
 share/trueos/conf/pcbsd-menu-commands.4th
