@@ -1,4 +1,3 @@
-# Joe Maloney <jmaloney@ixsystems.com>
 # $FreeBSD$
 
 PORTNAME=	trueos-server
