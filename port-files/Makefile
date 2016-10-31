@@ -24,7 +24,9 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
 		${LOCALBASE}/bin/zfs-stats:sysutils/zfs-stats \
 		ataidle>=0:sysutils/ataidle \
 		openntpd>=0:net/openntpd \
-		bhyve-firmware>=0:sysutils/bhyve-firmware
+		bhyve-firmware>=0:sysutils/bhyve-firmware \
+		dhcpcd>=0:net/dhcpcd \
+		wpa_supplicant>=0:security/wpa_supplicant
 
 CONFLICTS=	pcbsd-utils-[0-9]* trueos-desktop-[0-9]*
 WRKSRC_SUBDIR=	xtrafiles
