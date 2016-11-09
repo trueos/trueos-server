@@ -23,17 +23,15 @@ if [ ! -e "${PREFIX}/etc/trueos.conf" ] ; then
   echo "Doing first-time bootstrap"
   if [ -e "/etc/defaults/trueos-desktop" ] ; then
     tar cvf - -C ${PREFIX}/share/trueos/desktop-defaults/ . 2>/dev/null | tar xvf - -C / 2>/dev/null
-    /sbin/rc-update add ipfw boot
-    /sbin/rc-update add dhcpcd default
-    /sbin/rc-update add wpa_supplicant default
-    /sbin/rc-update add openntpd default
-    /sbin/rc-update add pcdm default
   else
     tar cvf - -C ${PREFIX}/share/trueos/server-defaults/ . 2>/dev/null | tar xvf - -C / 2>/dev/null
-    /sbin/rc-update add ipfw boot
-    /sbin/rc-update add dhcpcd default
-    /sbin/rc-update add wpa_supplicant default
   fi
 fi
+
+# Enable the OpenRC services
+set +e
+/sbin/rc-update add ipfw boot
+/sbin/rc-update add dhcpcd default
+/sbin/rc-update add wpa_supplicant default
 
 exit 0
