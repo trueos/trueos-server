@@ -35,4 +35,10 @@ set +e
 /sbin/rc-update add wpa_supplicant default
 /sbin/rc-update add sysadm default
 
+# Enable OpenRC settings
+set +e
+sysrc -f /etc/rc.conf rc_parallel="YES"
+sysrc -f /etc/rc.conf rc_logger="YES"
+sysrc -f /etc/rc.conf rc_log_path="/var/log/rc.log"
+
 exit 0
