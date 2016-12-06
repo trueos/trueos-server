@@ -26,6 +26,8 @@ fi
 
 # Enable the OpenRC services
 set +e
+/sbin/rc-update add bridge boot
+/sbin/rc-update add network boot
 /sbin/rc-update add ipfw boot
 /sbin/rc-update add devd boot
 /sbin/rc-update add dhcpcd default
