@@ -28,13 +28,13 @@ fi
 set +e
 /sbin/rc-update add ipfw boot
 /sbin/rc-update add devd boot
-/sbin/rc-update add dhcpcd default
-/sbin/rc-update add wpa_supplicant default
+/sbin/rc-update delete dhcpcd default
+/sbin/rc-update delete wpa_supplicant default
 /sbin/rc-update add sysadm default
 
 # Enable OpenRC settings
 set +e
-sysrc -f /etc/rc.conf rc_parallel="YES"
+sysrc -f /etc/rc.conf rc_parallel="NO"
 sysrc -f /etc/rc.conf rc_logger="YES"
 sysrc -f /etc/rc.conf rc_log_path="/var/log/rc.log"
 
