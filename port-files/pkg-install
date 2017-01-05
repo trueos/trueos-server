@@ -27,6 +27,7 @@ fi
 # Enable the OpenRC services
 set +e
 /sbin/rc-update add devd boot
+/sbin/rc-update add routing boot
 /sbin/rc-update delete dhcpcd default
 /sbin/rc-update delete wpa_supplicant default
 /sbin/rc-update add sysadm default
