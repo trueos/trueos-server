@@ -26,6 +26,11 @@ fi
 
 # Enable the OpenRC services
 set +e
+
+if [ -e "/var/.openrc-migrate-1" ] ; then
+  exit 0
+fi
+
 /sbin/rc-update add devd boot
 /sbin/rc-update add routing boot
 /sbin/rc-update delete dhcpcd default
@@ -37,5 +42,7 @@ set +e
 sysrc -f /etc/rc.conf rc_parallel="NO"
 sysrc -f /etc/rc.conf rc_logger="YES"
 sysrc -f /etc/rc.conf rc_log_path="/var/log/rc.log"
+
+touch /var/.openrc-migrate-1
 
 exit 0
