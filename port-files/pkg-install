@@ -37,12 +37,6 @@ fi
 /sbin/rc-update delete wpa_supplicant default
 /sbin/rc-update add sysadm default
 
-# Enable OpenRC settings
-set +e
-sysrc -f /etc/rc.conf rc_parallel="NO"
-sysrc -f /etc/rc.conf rc_logger="YES"
-sysrc -f /etc/rc.conf rc_log_path="/var/log/rc.log"
-
 touch /var/.openrc-migrate-1
 
 exit 0
