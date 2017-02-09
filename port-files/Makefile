@@ -22,6 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
 		${LOCALBASE}/bin/tmux:sysutils/tmux \
 		${LOCALBASE}/bin/nano:editors/nano \
 		${LOCALBASE}/bin/zfs-stats:sysutils/zfs-stats \
+		bsdstats>=0:sysutils/bsdstats \
 		ataidle>=0:sysutils/ataidle \
 		openntpd>=0:net/openntpd \
 		bhyve-firmware>=0:sysutils/bhyve-firmware \
