@@ -35,6 +35,7 @@ fi
 /sbin/rc-update delete dhcpcd default
 /sbin/rc-update delete wpa_supplicant default
 /sbin/rc-update add sysadm default
+/sbin/rc-update add bsdstats default
 
 touch /var/.openrc-migrate-1
 
