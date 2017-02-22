@@ -7,6 +7,8 @@ if [ "$2" != "POST-INSTALL" ] ; then
    exit 0
 fi
 
+set +e
+
 # If this is during staging, we can skip for now
 echo $PREFIX | grep -q '/stage/'
 if [ $? -eq 0 ] ; then
@@ -24,7 +26,6 @@ if [ ! -e "${PREFIX}/etc/trueos.conf" ] ; then
 fi
 
 # Enable the OpenRC services
-set +e
 
 if [ -e "/var/.openrc-migrate-1" ] ; then
   exit 0
