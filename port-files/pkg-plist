@@ -2,7 +2,10 @@ bin/disable-tor-mode
 bin/enable-tor-mode
 bin/migrate_rc_openrc
 bin/restamp-grub
+bin/trueos-mount
+bin/trueos-unmount
 bin/warden-to-iocage
+etc/devd/automount.conf
 etc/fonts/local.conf
 etc/sudoers.d/trueos
 share/fluxbox/styles/bora_blue_4k/theme.cfg
@@ -20,13 +23,8 @@ share/trueos/cardDetect/setuptouch.sh
 share/trueos/cardDetect/x_config.sh
 share/trueos/cardDetect/xorg.conf.virtualbox
 share/trueos/conf/brand-trueos.4th
-share/trueos/conf/loader.conf.trueos
 share/trueos/conf/logo-trueos.4th
 share/trueos/conf/ntpd.conf
-share/trueos/conf/pcbsd-menu-commands.4th
-share/trueos/conf/pcbsd-menu.rc
-share/trueos/conf/rc.conf.desktop
-share/trueos/conf/rc.conf.server
 share/trueos/conf/smb4.conf
 share/trueos/conf/torrc
 share/trueos/desktop-defaults/boot/grub/themes/trueos/README
@@ -61,7 +59,6 @@ share/trueos/desktop-defaults/boot/grub/themes/trueos/terminal_box_w.png
 share/trueos/desktop-defaults/boot/grub/themes/trueos/theme.txt
 share/trueos/desktop-defaults/boot/grub/trueosfont.pf2
 share/trueos/desktop-defaults/etc/blacklist
-share/trueos/desktop-defaults/etc/conf.d/modules
 share/trueos/desktop-defaults/etc/crontab
 share/trueos/desktop-defaults/etc/devfs.conf
 share/trueos/desktop-defaults/etc/devfs.rules
@@ -101,7 +98,6 @@ share/trueos/desktop-defaults/usr/local/etc/volman.conf
 share/trueos/desktop-defaults/usr/local/etc/xdg/autostart/pc-mixer.desktop
 share/trueos/desktop-defaults/usr/local/etc/xdg/autostart/pc-mounttray.desktop
 share/trueos/desktop-defaults/usr/local/etc/xdg/autostart/pc-welcome.desktop
-share/trueos/desktop-defaults/usr/local/share/applications/handbook.desktop
 share/trueos/desktop-defaults/usr/local/share/trueos/fluxboxinit/init
 share/trueos/desktop-defaults/usr/local/share/trueos/fluxboxinit/keys
 share/trueos/desktop-defaults/usr/local/share/trueos/fluxboxinit/menu
@@ -117,7 +113,6 @@ share/trueos/desktop-defaults/usr/local/share/trueos/icons/preferences-desktop.p
 share/trueos/desktop-defaults/usr/local/share/trueos/icons/soundconfig.png
 share/trueos/desktop-defaults/usr/local/share/trueos/icons/system-software-update.png
 share/trueos/desktop-defaults/usr/local/share/trueos/icons/system-users.png
-share/trueos/desktop-defaults/usr/local/share/trueos/icons/trueos-handbook.png
 share/trueos/desktop-defaults/usr/local/share/trueos/icons/utilities-system-monitor.png
 share/trueos/desktop-defaults/usr/local/share/trueos/scripts/first-boot.sh
 share/trueos/desktop-defaults/usr/local/share/trueos/scripts/lidchanged.sh
@@ -251,7 +246,6 @@ share/trueos/server-defaults/boot/grub/themes/trueos/terminal_box_sw.png
 share/trueos/server-defaults/boot/grub/themes/trueos/terminal_box_w.png
 share/trueos/server-defaults/boot/grub/themes/trueos/theme.txt
 share/trueos/server-defaults/boot/grub/trueosfont.pf2
-share/trueos/server-defaults/etc/conf.d/modules
 share/trueos/server-defaults/root/.bashrc
 share/trueos/server-defaults/root/.cshrc
 share/trueos/server-defaults/root/.profile

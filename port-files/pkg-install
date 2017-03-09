@@ -7,6 +7,8 @@ if [ "$2" != "POST-INSTALL" ] ; then
    exit 0
 fi
 
+set +e
+
 # If this is during staging, we can skip for now
 echo $PREFIX | grep -q '/stage/'
 if [ $? -eq 0 ] ; then
@@ -14,7 +16,6 @@ if [ $? -eq 0 ] ; then
 fi
 
 # Copy over customizations for TrueOS
-  install -m 644 ${PREFIX}/share/trueos/conf/loader.conf.trueos /boot/loader.conf.trueos
   install -m 644 ${PREFIX}/share/trueos/conf/brand-trueos.4th /boot/brand-trueos.4th
   install -m 644 ${PREFIX}/share/trueos/server-defaults/etc/conf.d/modules /etc/conf.d/modules/
 
@@ -25,17 +26,18 @@ if [ ! -e "${PREFIX}/etc/trueos.conf" ] ; then
 fi
 
 # Enable the OpenRC services
-set +e
-/sbin/rc-update add ipfw boot
-/sbin/rc-update add devd boot
-/sbin/rc-update add dhcpcd default
-/sbin/rc-update add wpa_supplicant default
-/sbin/rc-update add sysadm default
 
-# Enable OpenRC settings
-set +e
-sysrc -f /etc/rc.conf rc_parallel="YES"
-sysrc -f /etc/rc.conf rc_logger="YES"
-sysrc -f /etc/rc.conf rc_log_path="/var/log/rc.log"
+if [ -e "/var/.openrc-migrate-1" ] ; then
+  exit 0
+fi
+
+/sbin/rc-update add devd boot
+/sbin/rc-update add routing boot
+/sbin/rc-update delete dhcpcd default
+/sbin/rc-update delete wpa_supplicant default
+/sbin/rc-update add sysadm default
+/sbin/rc-update add bsdstats default
+
+touch /var/.openrc-migrate-1
 
 exit 0
