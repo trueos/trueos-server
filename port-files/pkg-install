@@ -52,14 +52,4 @@ if [ ! -e "/var/.openrc-migrate-4" ] ; then
 fi
 touch /var/.openrc-migrate-4
 
-if [ ! -e "/var/.trueos-migrate-4" ] ; then
-  # Switch to active updating not just at shutdown -r now
-  if [ ! -e "/etc/defaults/vendor.conf" ] ; then
-    echo "#!/bin/sh" > /etc/defaults/vendor.conf
-  fi
-  echo "trueos_active_update=\"YES\"" >> /etc/defaults/vendor.conf
-fi
-touch /var/.trueos-migrate-4
-
-
 exit 0
