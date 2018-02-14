@@ -29,12 +29,12 @@ RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
 		dhcpcd>=0:net/dhcpcd
 
 CONFLICTS=	pcbsd-utils-[0-9]* trueos-desktop-[0-9]*
-WRKSRC_SUBDIR=	xtrafiles
-MAKE_ARGS=	PREFIX=${STAGEDIR}${PREFIX}
+WRKSRC_SUBDIR=	package-files
+MAKE_ARGS=	STAGEDIR=${STAGEDIR}
 
 USE_GITHUB=     yes
 GH_ACCOUNT=     trueos
-GH_PROJECT=     trueos-core
+GH_PROJECT=     trueos-server
 GH_TAGNAME=     %%GHTAG%%
 
 .include <bsd.port.mk>

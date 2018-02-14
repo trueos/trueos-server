@@ -1,0 +1,5 @@
+editors/vim
+misc/trueos-server
+ports-mgmt/pkg
+sysutils/trueos-utils
+sysutils/bsdstats

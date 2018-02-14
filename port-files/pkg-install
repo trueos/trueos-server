@@ -15,16 +15,6 @@ if [ $? -eq 0 ] ; then
    exit 0
 fi
 
-# Copy over customizations for TrueOS
-install -m 644 ${PREFIX}/share/trueos/conf/rc.conf.server /etc/rc.conf.trueos
-install -m 644 ${PREFIX}/share/trueos/conf/brand-trueos.4th /boot/brand-trueos.4th
-install -m 644 ${PREFIX}/share/trueos/server-defaults/etc/conf.d/modules /etc/conf.d/modules/
-
-if [ ! -e "${PREFIX}/etc/trueos.conf" ] ; then
-  # Do the first-time setup
-  echo "Doing first-time bootstrap"
-  tar cvf - -C ${PREFIX}/share/trueos/server-defaults/ . 2>/dev/null | tar xvf - -C / 2>/dev/null
-fi
 
 # Enable the OpenRC services
 
