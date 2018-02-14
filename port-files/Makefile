@@ -9,24 +9,13 @@ DISTFILES=
 MAINTAINER=	jmaloney@ixsystems.com
 COMMENT=	TrueOS Server
 
-RUN_DEPENDS=	${LOCALBASE}/bin/pc-updatemanager:sysutils/pc-updatemanager \
-		${LOCALBASE}/sbin/pc-sysinstall:sysutils/pc-sysinstall \
-		${LOCALBASE}/share/trueos/scripts/functions.sh:sysutils/trueos-libsh \
-		${LOCALBASE}/bin/lpreserver:sysutils/life-preserver \
-		${LOCALBASE}/bin/sysadm-binary:sysutils/sysadm \
-		${LOCALBASE}/sbin/beadm:sysutils/beadm \
+RUN_DEPENDS=	trueos-core>=0:misc/trueos-core \
 		${LOCALBASE}/bin/sudo:security/sudo \
 		${LOCALBASE}/bin/zsh:shells/zsh \
 		${LOCALBASE}/bin/rsync:net/rsync \
 		${LOCALBASE}/bin/screen:sysutils/screen \
 		${LOCALBASE}/bin/tmux:sysutils/tmux \
-		${LOCALBASE}/bin/nano:editors/nano \
-		${LOCALBASE}/bin/zfs-stats:sysutils/zfs-stats \
-		bsdstats>=0:sysutils/bsdstats \
-		ataidle>=0:sysutils/ataidle \
-		openntpd>=0:net/openntpd \
-		bhyve-firmware>=0:sysutils/bhyve-firmware \
-		dhcpcd>=0:net/dhcpcd
+		${LOCALBASE}/bin/nano:editors/nano
 
 CONFLICTS=	pcbsd-utils-[0-9]* trueos-desktop-[0-9]*
 WRKSRC_SUBDIR=	package-files
