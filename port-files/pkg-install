@@ -19,12 +19,12 @@ fi
 # Enable the OpenRC services
 
 if [ ! -e "/var/.openrc-migrate-1" ] ; then
-  /sbin/rc-update add devd boot
-  /sbin/rc-update add routing boot
-  /sbin/rc-update delete dhcpcd default
-  /sbin/rc-update delete wpa_supplicant default
-  /sbin/rc-update add sysadm default
-  /sbin/rc-update add bsdstats default
+  /sbin/rc-update add devd boot >/dev/null 2>/dev/null
+  /sbin/rc-update add routing boot >/dev/null 2>/dev/null
+  /sbin/rc-update delete dhcpcd default >/dev/null 2>/dev/null
+  /sbin/rc-update delete wpa_supplicant default >/dev/null 2>/dev/null
+  /sbin/rc-update add sysadm default >/dev/null 2>/dev/null
+  /sbin/rc-update add bsdstats default >/dev/null 2>/dev/null
 fi
 touch /var/.openrc-migrate-1
 
@@ -38,7 +38,7 @@ fi
 touch /var/.openrc-migrate-3
 
 if [ ! -e "/var/.openrc-migrate-4" ] ; then
-    /sbin/rc-update add mountlate default
+    /sbin/rc-update add mountlate default >/dev/null 2>/dev/null
 fi
 touch /var/.openrc-migrate-4
 
