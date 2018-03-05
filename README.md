@@ -1,4 +1,7 @@
-# trueos-server
+# Automation tests for ***trueos-server** ISOs
+The package files and other information for the "trueos-server" *package* is located in the "trueos/trueos-core" repository.
+
+---
 
 **Project Information: Table of Contents**
 
